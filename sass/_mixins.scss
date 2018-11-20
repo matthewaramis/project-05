@@ -1,6 +1,19 @@
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//Media queries
+@mixin tablet-query {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-query {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
 }
