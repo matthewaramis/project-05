@@ -9,14 +9,41 @@ body {
   background: $color__background-body;
   color: $color__text-main;
   font-family: $font__main;
-  margin-left: 0.75rem;
 
-  @include tablet-query {
-    margin-left: 1rem;
+  .site {
+    padding: 1rem;
   }
 }
 
+.content-area {
+}
+
 .site-main {
+  div {
+    @include desktop-query {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      article {
+        @include desktop-query {
+          margin: 0 4rem;
+          width: 50%;
+        }
+      }
+    }
+
+    i {
+      display: none;
+
+      @include desktop-query {
+        display: block;
+        font-size: 7.5rem;
+        color: $color__brand-green;
+      }
+    }
+  }
+
   button {
     border: 2px solid $color__brand-green;
     padding: 0.75rem 2.5rem;
@@ -33,6 +60,11 @@ body {
     @include tablet-query {
       font-size: 1.25rem;
     }
+
+    @include desktop-query {
+      position: absolute;
+      left: 42vw;
+    }
   }
 
   .entry-content {
@@ -43,31 +75,36 @@ body {
       font-size: 1.75rem;
     }
 
-    p {
-      margin-bottom: 0.75rem;
+    @include desktop-query {
+      font-size: 2.5rem;
     }
   }
 
-  article {
-    .entry-meta {
-      display: flex;
-      align-items: center;
+  p {
+    margin-bottom: 0.75rem;
+  }
+}
+
+article {
+  .entry-meta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: $font__main;
+    font-size: 1.25rem;
+
+    h2 {
       font-family: $font__main;
       font-size: 1.25rem;
+      font-weight: 500;
+    }
 
-      h2 {
-        font-family: $font__main;
-        font-size: 1.25rem;
-        font-weight: 500;
-      }
+    .source {
+      font-style: italic;
 
-      .source {
-        font-style: italic;
-
-        a {
-          text-decoration: none;
-          color: $color__brand-green;
-        }
+      a {
+        text-decoration: none;
+        color: $color__brand-green;
       }
     }
   }

@@ -19,7 +19,7 @@
 				</nav><!-- #site-navigation -->
 
 				<div>
-					<p>Brought to you by <span class="footer-companyname">RED Academy</span>
+					<p>Brought to you by <a href="https://redacademy.com/vancouver/"><span class="footer-companyname">RED Academy</span></a>
 				</div>
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

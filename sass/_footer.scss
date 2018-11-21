@@ -1,11 +1,16 @@
 .site-footer {
-  position: absolute;
-  bottom: 4rem;
+  position: relative;
+  height: 12rem;
+  bottom: -6rem;
 
   @include tablet-query {
     display: flex;
     align-items: center;
     width: 100%;
+  }
+
+  @include desktop-query {
+    left: 50vw;
   }
 
   div {
@@ -15,6 +20,11 @@
       @include tablet-query {
         margin-top: 0;
         margin-bottom: 1rem;
+        padding-left: 1.25rem;
+      }
+
+      a {
+        text-decoration: none;
       }
     }
   }

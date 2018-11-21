@@ -9,7 +9,8 @@ $source = get_post_meta( get_the_ID(), '_qod_quote_source', true );
 $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 
 ?>
-
+<div>
+<i class="fas fa-quote-left"></i>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
@@ -39,6 +40,8 @@ $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 	</div><!-- .entry-meta -->
 
 </article><!-- #post-## -->
+<i class="fas fa-quote-right"></i>
+</div>
 
 <?php 
 	if( is_home() || is_single() ): ?>

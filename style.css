@@ -457,7 +457,7 @@ a {
   width: 100%; }
   @media (min-width: 600px) {
     .main-navigation {
-      width: 40.75%; } }
+      width: auto; } }
   .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -626,11 +626,33 @@ object {
 body {
   background: #222222;
   color: #ffffff;
-  font-family: "Exo-Light";
-  margin-left: 0.75rem; }
-  @media (min-width: 600px) {
-    body {
-      margin-left: 1rem; } }
+  font-family: "Exo-Light"; }
+  body .site {
+    padding: 1rem; }
+
+@media (min-width: 1080px) {
+  .site-main div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
+  @media (min-width: 1080px) and (min-width: 1080px) {
+    .site-main div article {
+      margin: 0 4rem;
+      width: 50%; } }
+
+.site-main div i {
+  display: none; }
+  @media (min-width: 1080px) {
+    .site-main div i {
+      display: block;
+      font-size: 7.5rem;
+      color: #00cc00; } }
 
 .site-main button {
   border: 2px solid #00cc00;
@@ -648,6 +670,10 @@ body {
   @media (min-width: 600px) {
     .site-main button {
       font-size: 1.25rem; } }
+  @media (min-width: 1080px) {
+    .site-main button {
+      position: absolute;
+      left: 42vw; } }
 
 .site-main .entry-content {
   font-family: "Exo-Light";
@@ -655,40 +681,60 @@ body {
   @media (min-width: 600px) {
     .site-main .entry-content {
       font-size: 1.75rem; } }
-  .site-main .entry-content p {
-    margin-bottom: 0.75rem; }
+  @media (min-width: 1080px) {
+    .site-main .entry-content {
+      font-size: 2.5rem; } }
 
-.site-main article .entry-meta {
+.site-main p {
+  margin-bottom: 0.75rem; }
+
+article .entry-meta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-family: "Exo-Light";
   font-size: 1.25rem; }
-  .site-main article .entry-meta h2 {
+  article .entry-meta h2 {
     font-family: "Exo-Light";
     font-size: 1.25rem;
     font-weight: 500; }
-  .site-main article .entry-meta .source {
+  article .entry-meta .source {
     font-style: italic; }
-    .site-main article .entry-meta .source a {
+    article .entry-meta .source a {
       text-decoration: none;
       color: #00cc00; }
 
 .site-header {
   margin-bottom: 2rem; }
+  @media (min-width: 1080px) {
+    .site-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
   .site-header a img {
     width: 70vw;
-    height: auto; }
+    height: auto;
+    margin-top: 2rem; }
     @media (min-width: 600px) {
       .site-header a img {
         width: 65vw; } }
+    @media (min-width: 1080px) {
+      .site-header a img {
+        width: 50vw; } }
 
 .site-footer {
-  position: absolute;
-  bottom: 4rem; }
+  position: relative;
+  height: 12rem;
+  bottom: -6rem; }
   @media (min-width: 600px) {
     .site-footer {
       display: -webkit-box;
@@ -698,12 +744,18 @@ body {
           -ms-flex-align: center;
               align-items: center;
       width: 100%; } }
+  @media (min-width: 1080px) {
+    .site-footer {
+      left: 50vw; } }
   .site-footer div p {
     font-size: 1rem; }
     @media (min-width: 600px) {
       .site-footer div p {
         margin-top: 0;
-        margin-bottom: 1rem; } }
+        margin-bottom: 1rem;
+        padding-left: 1.25rem; } }
+    .site-footer div p a {
+      text-decoration: none; }
 
 .menu a {
   color: #00cc00;

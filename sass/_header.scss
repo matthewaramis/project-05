@@ -1,13 +1,23 @@
 .site-header {
   margin-bottom: 2rem;
 
+  @include desktop-query {
+    display: flex;
+    justify-content: center;
+  }
+
   a {
     img {
       width: 70vw;
       height: auto;
+      margin-top: 2rem;
 
       @include tablet-query {
         width: 65vw;
+      }
+
+      @include desktop-query {
+        width: 50vw;
       }
     }
   }
