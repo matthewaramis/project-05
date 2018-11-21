@@ -1,19 +1,52 @@
+.site-footer {
+  position: absolute;
+  bottom: 4rem;
+
+  @include tablet-query {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  div {
+    p {
+      font-size: 1rem;
+
+      @include tablet-query {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
 .menu {
   a {
     color: $color__brand-green;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    padding: 0 1rem;
+    border-right: 1px solid $color__brand-white;
+    margin-bottom: 1rem;
+  }
+
+  li:first-child {
+    a {
+      padding-left: 0;
+    }
+  }
+
+  li:last-child {
+    a {
+      border-right: none;
+
+      @include tablet-query {
+        border-right: 1px solid $color__brand-white;
+      }
+    }
   }
 }
 
 .footer-companyname {
   color: $color__brand-green;
-  font-size: 1.25rem;
-}
-
-.site-footer {
-  div {
-    p {
-      font-size: 1.25rem;
-    }
-  }
+  font-size: 1rem;
 }

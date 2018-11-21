@@ -1,6 +1,14 @@
 .site-header {
-  img {
-    width: 100vw;
-    height: auto;
+  margin-bottom: 2rem;
+
+  a {
+    img {
+      width: 70vw;
+      height: auto;
+
+      @include tablet-query {
+        width: 65vw;
+      }
+    }
   }
 }

@@ -26,7 +26,10 @@
 					<p class="site-description"></p>
 				</div><!-- .site-branding -->
 
-				<img class="site-logo" href="<?php echo get_template_directory_uri() . '/qod-logo.svg' ?>">
+				<a href="/project-05">
+				<img class="site-logo" src="<?php echo get_template_directory_uri() . '/qod-logo.svg' ?>">
+				</a>
+				
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">

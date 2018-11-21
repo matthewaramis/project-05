@@ -9,24 +9,66 @@ body {
   background: $color__background-body;
   color: $color__text-main;
   font-family: $font__main;
+  margin-left: 0.75rem;
+
+  @include tablet-query {
+    margin-left: 1rem;
+  }
 }
 
 .site-main {
   button {
     border: 2px solid $color__brand-green;
-    padding: 1rem 5rem;
-    font-size: 1.5rem;
+    padding: 0.75rem 2.5rem;
+    font-size: 1rem;
     text-align: center;
     color: $color__brand-green;
-    border-radius: 5px;
+    border-radius: 2.5px;
     background-color: $color__background-body;
     box-shadow: none;
     text-shadow: none;
     font-family: $font__accent;
+    margin-top: 1rem;
+
+    @include tablet-query {
+      font-size: 1.25rem;
+    }
   }
 
   .entry-content {
-    font-family: $font__accent;
-    font-size: 2rem;
+    font-family: $font__main;
+    font-size: 1.25rem;
+
+    @include tablet-query {
+      font-size: 1.75rem;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  article {
+    .entry-meta {
+      display: flex;
+      align-items: center;
+      font-family: $font__main;
+      font-size: 1.25rem;
+
+      h2 {
+        font-family: $font__main;
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+
+      .source {
+        font-style: italic;
+
+        a {
+          text-decoration: none;
+          color: $color__brand-green;
+        }
+      }
+    }
   }
 }

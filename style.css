@@ -455,8 +455,10 @@ a {
   display: block;
   float: left;
   width: 100%; }
+  @media (min-width: 600px) {
+    .main-navigation {
+      width: 40.75%; } }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -624,36 +626,101 @@ object {
 body {
   background: #222222;
   color: #ffffff;
-  font-family: "Exo-Light"; }
+  font-family: "Exo-Light";
+  margin-left: 0.75rem; }
+  @media (min-width: 600px) {
+    body {
+      margin-left: 1rem; } }
 
 .site-main button {
   border: 2px solid #00cc00;
-  padding: 1rem 5rem;
-  font-size: 1.5rem;
+  padding: 0.75rem 2.5rem;
+  font-size: 1rem;
   text-align: center;
   color: #00cc00;
-  border-radius: 5px;
+  border-radius: 2.5px;
   background-color: #222222;
   -webkit-box-shadow: none;
           box-shadow: none;
   text-shadow: none;
-  font-family: "Exo"; }
+  font-family: "Exo";
+  margin-top: 1rem; }
+  @media (min-width: 600px) {
+    .site-main button {
+      font-size: 1.25rem; } }
 
 .site-main .entry-content {
-  font-family: "Exo";
-  font-size: 2rem; }
+  font-family: "Exo-Light";
+  font-size: 1.25rem; }
+  @media (min-width: 600px) {
+    .site-main .entry-content {
+      font-size: 1.75rem; } }
+  .site-main .entry-content p {
+    margin-bottom: 0.75rem; }
 
-.site-header img {
-  width: 100vw;
-  height: auto; }
+.site-main article .entry-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Exo-Light";
+  font-size: 1.25rem; }
+  .site-main article .entry-meta h2 {
+    font-family: "Exo-Light";
+    font-size: 1.25rem;
+    font-weight: 500; }
+  .site-main article .entry-meta .source {
+    font-style: italic; }
+    .site-main article .entry-meta .source a {
+      text-decoration: none;
+      color: #00cc00; }
+
+.site-header {
+  margin-bottom: 2rem; }
+  .site-header a img {
+    width: 70vw;
+    height: auto; }
+    @media (min-width: 600px) {
+      .site-header a img {
+        width: 65vw; } }
+
+.site-footer {
+  position: absolute;
+  bottom: 4rem; }
+  @media (min-width: 600px) {
+    .site-footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 100%; } }
+  .site-footer div p {
+    font-size: 1rem; }
+    @media (min-width: 600px) {
+      .site-footer div p {
+        margin-top: 0;
+        margin-bottom: 1rem; } }
 
 .menu a {
   color: #00cc00;
-  font-size: 1.25rem; }
+  font-size: 1rem;
+  padding: 0 1rem;
+  border-right: 1px solid #ffffff;
+  margin-bottom: 1rem; }
+
+.menu li:first-child a {
+  padding-left: 0; }
+
+.menu li:last-child a {
+  border-right: none; }
+  @media (min-width: 600px) {
+    .menu li:last-child a {
+      border-right: 1px solid #ffffff; } }
 
 .footer-companyname {
   color: #00cc00;
-  font-size: 1.25rem; }
-
-.site-footer div p {
-  font-size: 1.25rem; }
+  font-size: 1rem; }
