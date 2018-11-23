@@ -31,7 +31,7 @@
           // append content
           $('.entry-content').append(`${data[0].content.rendered}`);
 
-          $('.entry-title').append(`${data[0].title.rendered}`);
+          $('.entry-title').append(`&mdash; ${data[0].title.rendered}`);
 
           if (data[0]._qod_quote_source_url.length > 0) {
             $('.source').append(
@@ -52,6 +52,7 @@
         })
         .fail(function(err) {
           // Append a message for the user / alert a message saying something went wrong
+
           console.log(err);
         });
     } // end of getQuote
@@ -64,6 +65,7 @@
 
     $('#quote-submission-form').on('submit', function(event) {
       event.preventDefault();
+
       postQuote();
     });
 
@@ -71,22 +73,45 @@
       // get values of your form inputs
       // $('#form-id').val();
 
+      const quoteAuthor = $('#quote-author').val();
+
+      const quoteContent = $('#quote-content').val();
+
+      const quoteSource = $('#quote-source').val();
+
+      const quoteSourceURL = $('#quote-source-url').val();
+
       $.ajax({
         method: 'POST',
         url: qod_vars.rest_url + 'wp/v2/posts',
         data: {
           // title: 'something here, form .val'
+          title: quoteAuthor,
+          content: quoteContent,
+          _qod_quote_source: quoteSource,
+          _qod_quote_source_url: quoteSourceURL,
+
+          status: 'publish'
         },
         beforeSend: function(xhr) {
           xhr.setRequestHeader('X-WP-Nonce', qod_vars.nonce);
         }
       })
-        .done(function() {
+        .done(function(response) {
+          console.log(response);
+          $('.quote-submission-form').slideUp('fast');
+          $('.quote-submission').append(
+            '<p class="submission-msg">Your form has been submitted!</p>'
+          );
           // slideUp the form
           //append a success message
         })
         .fail(function() {
           // output a message for user to say something went wrong
+          $('.quote-submission').empty();
+          $('.quote-submission').append(
+            '<p class="submission-msg">Oops! Your form has failed to submit.</p>'
+          );
         });
     }
   }); // end of doc ready
