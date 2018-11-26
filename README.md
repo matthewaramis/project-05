@@ -1,6 +1,6 @@
 # Quotes on Dev
 
-<img src="/quotes on dev screenshot.png" alt="a screenshot of the quotes on dev desktop website" height="1200" width="600">
+<img src="/quotes on dev screenshot.png" alt="a screenshot of the quotes on dev desktop website" height="600" width="1200">
 
 This is a website made for class, involving a website based around quotes relevant to web development.
 
