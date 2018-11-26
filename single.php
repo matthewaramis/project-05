@@ -7,6 +7,7 @@
 
 get_header(); ?>
 
+	<div class="page-author">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -20,5 +21,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	</div><!-- #page-author -->
 
 <?php get_footer(); ?>
