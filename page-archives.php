@@ -6,10 +6,10 @@
  */
 
 get_header(); ?>
-
+    <div class="page-archives">
+    <i class="fas fa-quote-left"></i>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
             <section class="browse-archives">
 			  <header class="entry-header">
                   <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -52,6 +52,7 @@ get_header(); ?>
             </section>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
-
+    </div><!-- #primary -->
+    <i class="fas fa-quote-right"></i>
+    </div><!-- #page-archives -->
 <?php get_footer(); ?>

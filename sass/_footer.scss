@@ -10,8 +10,8 @@
   }
 
   @include desktop-query {
-    left: 50vw;
-    width: 50%;
+    left: 45vw;
+    width: 52.5%;
   }
 
   div {
@@ -40,6 +40,10 @@
     margin-bottom: 1rem;
   }
 
+  a:hover {
+    color: $color__link-hover;
+  }
+
   li:first-child {
     a {
       padding-left: 0;
@@ -60,4 +64,8 @@
 .footer-companyname {
   color: $color__brand-green;
   font-size: 1rem;
+}
+
+.footer-companyname:hover {
+  color: $color__link-hover;
 }

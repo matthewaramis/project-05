@@ -439,11 +439,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #00cc00; }
   a:visited {
-    color: purple; }
+    color: #00cc00; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #00a000; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -622,7 +622,87 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* All Archives Page */
-/* Submit a Quote Page */
+@media (min-width: 1080px) {
+  .site .page-archives {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+
+.site .page-archives .fa-quote-left,
+.site .page-archives .fa-quote-right {
+  display: none; }
+  @media (min-width: 1080px) {
+    .site .page-archives .fa-quote-left,
+    .site .page-archives .fa-quote-right {
+      display: block;
+      font-size: 7.5rem;
+      color: #00cc00; } }
+
+.site .page-archives .content-area {
+  margin: 0 4rem;
+  width: 50%; }
+  @media (min-width: 1080px) {
+    .site .page-archives .content-area .post-archives {
+      display: block; } }
+  .site .page-archives .content-area .post-archives ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .site .page-archives .content-area .post-archives ul li {
+      margin: 0 1.25rem 0.5rem 0; }
+      @media (min-width: 600px) {
+        .site .page-archives .content-area .post-archives ul li {
+          font-size: 1.25rem; } }
+    .site .page-archives .content-area .post-archives ul a {
+      text-decoration: none; }
+  @media (min-width: 1080px) {
+    .site .page-archives .content-area .category-archives {
+      display: block; } }
+  .site .page-archives .content-area .category-archives ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .site .page-archives .content-area .category-archives ul li {
+      margin: 0 1.25rem 0.5rem 0; }
+      @media (min-width: 600px) {
+        .site .page-archives .content-area .category-archives ul li {
+          font-size: 1.25rem; } }
+    .site .page-archives .content-area .category-archives ul a {
+      text-decoration: none; }
+  @media (min-width: 1080px) {
+    .site .page-archives .content-area .tag-archives {
+      display: block; } }
+  .site .page-archives .content-area .tag-archives ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .site .page-archives .content-area .tag-archives ul li {
+      margin: 0 1.25rem 0.5rem 0; }
+    .site .page-archives .content-area .tag-archives ul a {
+      text-decoration: none; }
+      @media (min-width: 600px) {
+        .site .page-archives .content-area .tag-archives ul a {
+          font-size: 1.25rem !important; } }
+
+/* Home Page */
 body {
   background: #222222;
   color: #ffffff;
@@ -640,7 +720,8 @@ body {
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; } }
+            align-items: center;
+    width: 100%; } }
   @media (min-width: 1080px) and (min-width: 1080px) {
     .site-main div article {
       margin: 0 4rem;
@@ -710,6 +791,86 @@ article .entry-meta {
       text-decoration: none;
       color: #00cc00; }
 
+/* Submit A Quote Page */
+@media (min-width: 1080px) {
+  .page-submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; } }
+
+.page-submit .fa-quote-left,
+.page-submit .fa-quote-right {
+  display: none; }
+  @media (min-width: 1080px) {
+    .page-submit .fa-quote-left,
+    .page-submit .fa-quote-right {
+      display: block;
+      font-size: 7.5rem;
+      color: #00cc00; } }
+
+@media (min-width: 1080px) {
+  .page-submit .content-area {
+    margin: 0 4rem;
+    width: 50%; } }
+
+@media (min-width: 1080px) {
+  .page-submit .content-area .site-main .quote-submission-wrapper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; } }
+
+.page-submit .content-area .site-main .quote-submission-wrapper form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 1080px) {
+    .page-submit .content-area .site-main .quote-submission-wrapper form div {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      width: 60vw; } }
+  .page-submit .content-area .site-main .quote-submission-wrapper form div label {
+    width: 100%;
+    margin-bottom: 1rem; }
+  .page-submit .content-area .site-main .quote-submission-wrapper form div input,
+  .page-submit .content-area .site-main .quote-submission-wrapper form div textarea {
+    margin-bottom: 2rem;
+    border: 2px solid #00cc00;
+    border-radius: 2.5px;
+    background: #222222;
+    color: #ffffff; }
+    @media (min-width: 600px) {
+      .page-submit .content-area .site-main .quote-submission-wrapper form div input,
+      .page-submit .content-area .site-main .quote-submission-wrapper form div textarea {
+        width: 75%; } }
+  .page-submit .content-area .site-main .quote-submission-wrapper form div input:focus,
+  .page-submit .content-area .site-main .quote-submission-wrapper form div textarea:focus {
+    border: 2px solid #ffffff;
+    border-radius: 2.5px; }
+
+.page-submit .content-area .site-main .quote-submission-wrapper form input[type='submit'] {
+  border: 2px solid #00cc00;
+  padding: 0.75rem 2.5rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #00cc00;
+  border-radius: 2.5px;
+  background-color: #222222;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  font-family: "Exo"; }
+
 .site-header {
   margin-bottom: 2rem; }
   @media (min-width: 1080px) {
@@ -746,8 +907,8 @@ article .entry-meta {
       width: 100%; } }
   @media (min-width: 1080px) {
     .site-footer {
-      left: 50vw;
-      width: 50%; } }
+      left: 45vw;
+      width: 52.5%; } }
   .site-footer div p {
     font-size: 1rem; }
     @media (min-width: 600px) {
@@ -765,6 +926,9 @@ article .entry-meta {
   border-right: 1px solid #ffffff;
   margin-bottom: 1rem; }
 
+.menu a:hover {
+  color: #00a000; }
+
 .menu li:first-child a {
   padding-left: 0; }
 
@@ -777,3 +941,6 @@ article .entry-meta {
 .footer-companyname {
   color: #00cc00;
   font-size: 1rem; }
+
+.footer-companyname:hover {
+  color: #00a000; }

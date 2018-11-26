@@ -6,7 +6,8 @@
  */
 
 get_header(); ?>
-
+    <div class="page-submit">
+    <i class="fas fa-quote-left"></i>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -52,6 +53,8 @@ get_header(); ?>
             </section>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+    </div><!-- #primary -->
+    <i class="fas fa-quote-right"></i>
+    </div><!-- #page-submit -->
 
 <?php get_footer(); ?>

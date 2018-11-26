@@ -68,9 +68,6 @@ function qod_scripts() {
 
 	wp_enqueue_script( 'qod-script', get_template_directory_uri() . '/build/js/custom.min.js', array('jquery'), '', true );
 
-		// $script_url = get_template_directory_uri() . '/scripts.js';
-	
-	// wp_enqueue_script( 'qod_comments', $script_url, array( 'jquery' ), false, true );
    wp_localize_script( 'qod-script', 'qod_vars', array(
 	   'rest_url' => esc_url_raw( rest_url() ),
 	   'home_url' => esc_url_raw( home_url() ),

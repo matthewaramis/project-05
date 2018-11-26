@@ -71,7 +71,6 @@
 
     function postQuote() {
       // get values of your form inputs
-      // $('#form-id').val();
 
       const quoteAuthor = $('#quote-author').val();
 
@@ -85,7 +84,6 @@
         method: 'POST',
         url: qod_vars.rest_url + 'wp/v2/posts',
         data: {
-          // title: 'something here, form .val'
           title: quoteAuthor,
           content: quoteContent,
           _qod_quote_source: quoteSource,
@@ -99,7 +97,7 @@
       })
         .done(function(response) {
           console.log(response);
-          $('.quote-submission-form').slideUp('fast');
+          $('.quote-submission-wrapper').slideUp('fast');
           $('.quote-submission').append(
             '<p class="submission-msg">Your form has been submitted!</p>'
           );
