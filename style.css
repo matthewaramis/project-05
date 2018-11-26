@@ -791,6 +791,45 @@ article .entry-meta {
       text-decoration: none;
       color: #00cc00; }
 
+/* About Page */
+@media (min-width: 1080px) {
+  .page-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.page-about .fa-quote-left,
+.page-about .fa-quote-right {
+  display: none; }
+  @media (min-width: 1080px) {
+    .page-about .fa-quote-left,
+    .page-about .fa-quote-right {
+      display: block;
+      font-size: 7.5rem;
+      color: #00cc00; } }
+
+@media (min-width: 1080px) {
+  .page-about .content-area {
+    margin: 0 4rem; } }
+
+@media (min-width: 1080px) {
+  .page-about .content-area .entry-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; } }
+
+.page-about .content-area .entry-content p {
+  font-size: 1rem; }
+  .page-about .content-area .entry-content p a {
+    text-decoration: none; }
+
 /* Submit A Quote Page */
 @media (min-width: 1080px) {
   .page-submit {

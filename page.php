@@ -7,6 +7,8 @@
 
 get_header(); ?>
 
+	<div class="page-about">
+	<i class="fas fa-quote-left"></i>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -18,5 +20,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<i class="fas fa-quote-right"></i>
+	</div><!-- #page-about -->
 
 <?php get_footer(); ?>
